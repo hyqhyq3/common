@@ -88,10 +88,10 @@ type Armature struct {
 }
 
 type DragonBones struct {
-	Name      string   `xml:"name,attr"`
-	FrameRate int      `xml:"frameRate,attr"`
-	Version   string   `xml:"version,attr"`
-	Armature  Armature `xml:"armature"`
+	Name      string     `xml:"name,attr"`
+	FrameRate int        `xml:"frameRate,attr"`
+	Version   string     `xml:"version,attr"`
+	Armature  []Armature `xml:"armature"`
 }
 
 func DecodeSkeleton(path string) (db *DragonBones, err error) {
